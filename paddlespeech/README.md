@@ -9,8 +9,38 @@
 - python -m pip install paddlepaddle==2.3.2 -i https://pypi.tuna.tsinghua.edu.cn/simple
 - pip install paddlespeech
 - sudo apt-get install libsndfile1
+- python -m pip install moviepy auditok
 - python test.py
 - paddlespeech asr --lang zh --input zh.wav
+
+## macos 安装
+
+- python 3.10.7
+- pip install paddlespeech== 是查询版本
+- paddlepaddle==2.3.2
+- paddleaudio==1.0.1
+- paddlespeech==1.0.1
+- onnx==1.9.0
+- onnxruntime==1.12.0
+
+## 校验
+
+pyenv python 3.9.2没有问题 是安装的版本问题
+
+> python -c "from paddlespeech.cli.asr.infer import ASRExecutor"
+
+## 切分大文件 pypinyin_dict.large_pypinyin.py
+
+切分成两个文件，然后用`from .other import other_data`
+
+```python
+from pypinyin import load_phrases_dict
+from .other import other_data
+
+def load():
+    phrases_dict.update(other_data)
+    load_phrases_dict(phrases_dict)
+```
 
 # tts 语音合成
 

@@ -2,3 +2,4 @@
 exp/log
 exp
 *.csv
+__pycache__
