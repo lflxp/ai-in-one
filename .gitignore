@@ -3,3 +3,4 @@ exp/log
 exp
 *.csv
 __pycache__
+.DS_Store
