@@ -6,7 +6,12 @@
 - cd yolov5 && python detect.py --source 0 # 摄像头实时物体识别
 - android 安装IP摄像头 app
 - ios安装idection app
-- python detect.py --source http://admin:admin@192.168.60.100:8081
+
+# 调试
+
+- 【基于本地摄像天】python detect.py --source 0
+- 【基于自定义阈值】python detect.py --source 0 --hide-conf --conf-thres 0.8
+- 【基于实时流推送】python detect.py --source http://admin:admin@192.168.60.100:8081
 
 # 安装face_recognition
 
